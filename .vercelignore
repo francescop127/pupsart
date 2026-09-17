@@ -1,0 +1,9 @@
+node_modules
+.sites-runtime
+.wrangler
+dist
+.git
+.next
+.vinext
+out
+.env*
