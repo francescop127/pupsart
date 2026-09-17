@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { siteUrl } from "@/lib/seo";
 import "./globals.css";
 export const metadata: Metadata = {
-  title: { default: "Pupsart — Art living for pet lovers", template: "%s — Pupsart" },
+  ...(siteUrl ? { metadataBase: new URL(siteUrl) } : {}),
+  title: { default: "Pupsart — Ritratti pop personalizzati di cani", template: "%s — Pupsart" },
   description: "Ritratti pop su misura, oggetti e cultura visiva per persone con cani e standard.",
   robots: { index: true, follow: true },
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
